@@ -1,6 +1,7 @@
 name: S3 Deploy ingridmeaker.com
 on:
   workflow_dispatch:
+  page_build:
   push:
     branches:
       - gh-pages
