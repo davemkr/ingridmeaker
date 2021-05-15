@@ -11,12 +11,13 @@ jobs:
         - uses: actions/checkout@v2
           with:
             ref: 'gh-pages'
+            path: 'webroot'
         - uses: actions/setup-node@v1
 
         - name: Deploy
           uses: reggionick/s3-deploy@v3
           with:
-            folder: origin/gh-pages
+            folder: webroot
             bucket: ${{ secrets.S3_BUCKET }}
             bucket-region: ${{ secrets.S3_BUCKET_REGION }}
             dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
