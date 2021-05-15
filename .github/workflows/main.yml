@@ -1,5 +1,8 @@
 name: S3 Deploy ingridmeaker.com
-on: [push]
+on:
+  push:
+    branches:
+      - gh-pages
 jobs:
   run:
     runs-on: ubuntu-latest
